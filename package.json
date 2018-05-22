@@ -1,11 +1,15 @@
 {
   "name": "pong-web-app",
   "version": "1.0.0",
-  "description": "web application for hosting two player pong game",
-  "main": "servers/server.js",
+  "description": "Web app for hosting two player pong",
+  "main": "server/server.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jmevans",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

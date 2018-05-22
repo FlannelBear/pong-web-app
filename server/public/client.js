@@ -17,7 +17,7 @@ let rightPaddle = {
 
 function setUp() {
     // left paddle movement handler
-    $(document).on('keydown', function(e){
+    $(document).on('keyup', function(e){
         switch(e.keyCode){
             case 87:
                 leftPaddleUp();
@@ -30,7 +30,7 @@ function setUp() {
         }
     });
     // right paddle movement handler
-    $(document).on('keydown', function(e){
+    $(document).on('keyup', function(e){
         switch(e.keyCode){
             case 79:
                 rightPaddleUp();
@@ -42,21 +42,26 @@ function setUp() {
                 break;
         }
     });
-    // right paddle movement handlers
+    
 } // end documentReady
 
 function leftPaddleUp() {
-    console.log('leftPaddle up');
+    leftPaddle.yPosition -= 5;
+    $('#leftPaddle').css('top', `${leftPaddle.yPosition}vh`);
 }
 
 function leftPaddleDown() {
-    console.log('leftPaddle down');
+    leftPaddle.yPosition += 5;
+    $('#leftPaddle').css('top', `${leftPaddle.yPosition}vh`);
 }
 
 function rightPaddleUp() {
-    console.log('rightPaddle up');  
-}   
+    rightPaddle.yPosition -= 5;
+    $('#rightPaddle').css('top', `${rightPaddle.yPosition}vh`);
+}
 
 function rightPaddleDown() {
-    console.log('rightPaddle down');
+    rightPaddle.yPosition += 5;
+    $('#rightPaddle').css('top', `${rightPaddle.yPosition}vh`);
 }
+

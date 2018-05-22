@@ -10,7 +10,7 @@
 
 #leftPaddle {
     width: 5px;
-    height: 50px;
+    height: 100px;
     background-color: white;
     position: absolute;
     top: 50vh;
@@ -19,7 +19,7 @@
 
 #rightPaddle {
     width: 5px;
-    height: 50px;
+    height: 100px;
     background-color: white;
     position: absolute;
     top: 50vh;

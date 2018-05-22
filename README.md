@@ -12,6 +12,7 @@
 - Set dashed line for "half-court": object
 - Create score count on dom which updates when the ball impacts the wall
 - Set score limit to end game and require a refresh
+- Add control instructions at the top or bottom of each side of the screen
 
 ## Instructions
 
