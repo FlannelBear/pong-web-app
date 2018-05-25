@@ -1,16 +1,23 @@
-// Require express to source
 const express = require('express');
+const bodyParser = require('body-parser');
 
-// set app to use express
 const app = express();
 
-// set app to use the static method of express to scope client access to the public folder
-app.use( express.static('server/public'));
+app.use( express.static('server/server.js'));
+app.use(bodyParser.urlencoded({extended: true}));
 
-// set the port
 const port = 5000;
 
-// set the app to listen to the port
-app.listen(port, function(){
-    console.log(`Listening to port ${port}`);
+app.listen(port, () => console.log(`Server up on port ${port}.`));
+
+app.get('/pong', (req, res) => {
+    console.log('Handling GET for /pong route');
+    // handle response here
+    res.send('meow');
+});
+
+app.post('/pong', (req, res) => {
+    console.log('Handling POST for /pong route'. req.body);
+    // handle req.body here
+    res.send('ribbet');
 });

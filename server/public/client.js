@@ -42,8 +42,11 @@ function setUp() {
                 break;
         }
     });
-    
+    // start Game
+    $('#startButton').on('click', startGame);
 } // end documentReady
+
+let Cv = 10;
 
 function leftPaddleUp() {
     leftPaddle.yPosition -= 5;
@@ -65,3 +68,29 @@ function rightPaddleDown() {
     $('#rightPaddle').css('top', `${rightPaddle.yPosition}vh`);
 }
 
+function startGame(){
+    // random point
+    let x1 = randomX();
+    let y1 = randomY();
+    // third point
+    let x2 = x1;
+    let y2 = 50;
+    // calculate legs
+    let A = Math.abs(x2 - 50);
+    let B = Math.abs(y1 - 50);
+    // calculate thetaInit
+    let thetaInit = Math.tan(B/A);
+    // calculate velocity components
+    let Av = Cv * Math.acos(thetaInit);
+    let Bv = Cv * Math.asin(thetaInit);
+}
+
+function randomX(){
+   let x = Math.floor(Math.random() * 100);
+   return x;
+}
+
+function randomY(){
+    let y = Math.floor(Math.random() * 100);
+    return y;
+}

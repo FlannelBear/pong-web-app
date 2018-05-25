@@ -46,3 +46,12 @@ h3 {
 h4 {
     display: inline;
 }
+
+.userInterface {
+    color: white;
+    background-color: black;
+}
+
+p {
+    background-color: black;
+}

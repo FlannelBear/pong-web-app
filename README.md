@@ -23,14 +23,9 @@ Pong is a two player game.  The goal is to strike the opposite wall with the bal
 - Javascript
 - JQuery
 - Bootstrap
+- Node.js
 
-#### Documentation 
-
-- keydown: event listener for handling paddle movement
-- Up arrow key code: 38
-- Down arrow key code: 40
-- W key code: 87
-- S key code: 83
+#### The Math
 
 - Cv = const;
 - ThetaInit = tan(b/a);
@@ -39,3 +34,7 @@ Pong is a two player game.  The goal is to strike the opposite wall with the bal
 - A = abs(X1 - 50vw);
 - B = abs(Y1 = 50vh);
 - ThetaN = 90 - ThetaN-1;
+
+#### Stretch Goals:
+
+- Rotate Paddles
